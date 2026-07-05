@@ -3,12 +3,11 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "Hellow world"}
-
+    return {"message": "Hellow Amarjeet"}
+    
 @app.get("/user")
 def user():
-    return [
-        {"id": 1, "name": "Amarjeet"},
-        {"id": 2, "name": "Aman"},
-
-    ]
+        return[
+            {"id": 1, "name": "Amarjeet"},
+            {"id": 1, "name": "Vishwa"}
+        ]    
