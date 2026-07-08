@@ -1,13 +1,9 @@
 from fastapi import FastAPI
+from app.routes.chat import router as chat_router
 app = FastAPI()
 
+app.include_router(chat_router)
+
 @app.get("/")
-def home():
-    return {"message": "Hellow Amarjeet"}
-    
-@app.get("/user")
-def user():
-        return[
-            {"id": 1, "name": "Amarjeet"},
-            {"id": 1, "name": "Vishwa"}
-        ]    
+def readroot():
+    return {"message": "Welcome to the Chat API!"}
